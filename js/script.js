@@ -43,7 +43,14 @@ document.getElementById("btn-back-desk").addEventListener("click", function () {
   document.getElementById("btn-back-desk").style.display = "none";
   document.getElementById("theme-icon").style.display = "flex";
 });
+// Task-Assigned 
 
+window.onload = function () {
+    const task = document.getElementById('task-number').innerText.trim();
+    if (parseInt(task) === 0) {
+        alert("ok");
+    }
+};
 // btn click and count
 
 function compliteTask() {
@@ -84,7 +91,7 @@ document.getElementById('btn-shopEase').addEventListener('click', function () {
 	newElement.classList.add('add-history');
 	newElement.innerText = 'You have Complete The Task' + " " +  boxTitle + " " +"at" + " " +  time();
 	historyContainer.appendChild(newElement);
-	alert("Updated Successfully"); 
+	alert(" Board Updated Successfully"); 
 });
 
 // box-2
@@ -97,7 +104,7 @@ document.getElementById('btn-cloudSync').addEventListener('click', function () {
 	newElement.classList.add('add-history');
 	newElement.innerText = 'You have Complete The Task' + " " +  boxTitle + " " +"at" + " " +  time();
 	historyContainer.appendChild(newElement);
-	alert("Updated Successfully"); 
+	alert(" Board Updated Successfully"); 
 });
 
 // box-3
@@ -111,7 +118,7 @@ document.getElementById('btn-swiftPay').addEventListener('click', function () {
 	newElement.classList.add('add-history');
 	newElement.innerText = 'You have Complete The Task' + " " +  boxTitle + " " +"at" + " " +  time();
 	historyContainer.appendChild(newElement);
-	alert("Updated Successfully"); 
+	alert(" Board Updated Successfully"); 
 });
 // box-4
 document.getElementById('btn-meta').addEventListener('click', function () {
@@ -123,7 +130,7 @@ document.getElementById('btn-meta').addEventListener('click', function () {
 	newElement.classList.add('add-history');
 	newElement.innerText = 'You have Complete The Task' + " " +  boxTitle + " " +"at" + " " +  time();
 	historyContainer.appendChild(newElement);
-	alert("Updated Successfully"); 
+	alert(" Board Updated Successfully"); 
 });
 // box-5
 document.getElementById('btn-google').addEventListener('click', function () {
@@ -135,7 +142,7 @@ document.getElementById('btn-google').addEventListener('click', function () {
 	newElement.classList.add('add-history');
 	newElement.innerText = 'You have Complete The Task' + " " +  boxTitle + " " +"at" + " " +  time();
 	historyContainer.appendChild(newElement);
-	alert("Updated Successfully"); 
+	alert(" Board Updated Successfully"); 
 });
 // box-6
 document.getElementById('btn-glassdoar').addEventListener('click', function () {
@@ -147,5 +154,6 @@ document.getElementById('btn-glassdoar').addEventListener('click', function () {
 	newElement.classList.add('add-history');
 	newElement.innerText = 'You have Complete The Task' + " " +  boxTitle + " " +"at" + " " +  time();
 	historyContainer.appendChild(newElement);
-	alert("Updated Successfully"); 
+	alert(" Board  Board Updated Successfully"); 
 });
+
