@@ -10,10 +10,18 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<style>
+		.add-history{
+			margin-top: 15px;
+			background-color: #e2e8f0;
+			padding: 8px;
+			border-radius: 10px;
+		}
+	</style>
   </head>
   <body class="bg-slate-200">
     <!-- Header Section start -->
-    <header class="w-10/12 mx-auto pt-6">
+    <header class="w-10/12 mx-auto pt-6 ">
       <nav
         class="flex items-center justify-between bg-white p-3 px-6 rounded-2xl"
       >
@@ -21,24 +29,25 @@
           <img class="w-12" src="assets/logo.png" alt="Logo" />
           <h1 class="text-2xl">Dev <span class="font-bold">Board</span></h1>
         </div>
-        <div class="flex gap-6 items-center">
+        <div id="theme-icon" class="flex gap-6 items-center">
           <span
             class="flex items-center bg-slate-300 p-2 px-4 rounded-full gap-2"
           >
             <img class="w-5" src="assets/checkbox.png" alt="Checkbox" />
-            <p class="font-bold text-xl">23</p>
+            <p id="nav-number" class="font-bold text-xl">23</p>
           </span>
           <img id="theme-icon" class="w-8 h-8" src="assets/theme-btn.png" alt="Theme-Button" />
         </div>
+		<button id="btn-back-desk" class="btn btn-primary hidden">Back to Desk</button>
       </nav>
     </header>
     <!-- Main Section Start -->
     <main class="w-10/12 mx-auto pb-10">
-      <section class="mt-4 flex grid gap-4 grid-cols-4">
+      <section id="main-container" class="mt-4 flex grid gap-4 grid-cols-4">
         <!-- div 1 -->
         <div class="bg-white rounded-xl col-span-3">
           <!-- Card section -->
-          <div class="grid grid-cols-4 p-5 gap-5">
+          <div class="grid grid-cols-4 p-5 gap-5 border-b-2 border-dashed border-gray-100">
             <!-- Card 1 -->
             <div class="flex items-center gap-4 bg-slate-200 p-4 rounded-xl">
               <img
@@ -48,12 +57,12 @@
               />
               <span>
                 <p>Task Assigned </p>
-                <h1 class="text-2xl font-bold">06</h1>
+                <h1 id="task-number" class="text-2xl font-bold">6</h1>
               </span>
             </div>
             <!-- card 2  -->
-            <div
-              class="col-span-2 gap-3 p-4 flex items-center bg-linear-to-r from-blue-500 to-blue-50 rounded-xl"
+            <div id="board-card"
+              class="col-span-2 gap-3 p-4 flex items-center bg-linear-to-r from-blue-500 to-blue-50 rounded-xl cursor-pointer"
             >
               <img class="w-15" src="assets/board.png" alt="Board" />
               <p class="text-xl font-semibold text-white">
@@ -76,86 +85,86 @@
             <!-- Box-1 -->
             <div class="p-5 bg-slate-200 rounded-2xl">
               <small class="p-1 px-2 bg-slate-50 rounded-xl text-center">ShopEase</small>
-              <h3 class="font-semibold mt-4">Fix Mobile Button Issue</h3>
+              <h3 id="box-title1" class="font-semibold mt-4">Fix Mobile Button Issue</h3>
               <p class="bg-slate-50 rounded-lg p-2 mt-5 text-gray-500">Debug using Chrome DevTools,<br> check for overlapping elements</p>
               <span class="flex justify-between mt-4">
                 <div>
                   <small class="text-gray-400">Deadline</small><br>
                   <time>21 March 2025</time>
                 </div>
-                <button class="btn btn-primary">Completed</button>
+                <button id="btn-shopEase" class="btn btn-primary btn-complete">Completed</button>
               </span>
             </div>
 			<!-- Box - 2 -->
 			<div class="p-5 bg-slate-200 rounded-2xl">
 				<small class="p-1 px-2 bg-slate-50 rounded-xl text-center">CloudSync</small>
-				<h3 class="font-semibold mt-4">Add Dark Mode</h3>
+				<h3 id="box-title2" class="font-semibold mt-4">Add Dark Mode</h3>
 				<p class="bg-slate-50 rounded-lg p-2 mt-5 text-gray-500">Store the user's preference in localStorage, update CSS</p>
 				<span class="flex justify-between mt-4">
 				  <div>
 					<small class="text-gray-400">Deadline</small><br>
 					<time>21 March 2025</time>
 				  </div>
-				  <button class="btn btn-primary">Completed</button>
+				  <button id="btn-cloudSync" class="btn btn-primary btn-complete">Completed</button>
 				</span>
 			  </div>
 			  <!-- Box-3 -->
 			  <div class="p-5 bg-slate-200 rounded-2xl">
 				<small class="p-1 px-2 bg-slate-50 rounded-xl text-center">SwiftPay</small>
-				<h3 class="font-semibold mt-4">Optimize Home Page</h3>
+				<h3 id="box-title3" class="font-semibold mt-4">Optimize Home Page</h3>
 				<p class="bg-slate-50 rounded-lg p-2 mt-5 text-gray-500">Debug using Chrome DevTools, check for overlappin</p>
 				<span class="flex justify-between mt-4">
 				  <div>
 					<small class="text-gray-400">Deadline</small><br>
 					<time>21 March 2025</time>
 				  </div>
-				  <button class="btn btn-primary">Completed</button>
+				  <button id="btn-swiftPay" class="btn btn-primary btn-complete">Completed</button>
 				</span>
 			  </div>
 			  <!-- Box-4 -->
 			  <div class="p-5 bg-slate-200 rounded-2xl">
 				<small class="p-1 px-2 bg-slate-50 rounded-xl text-center">Meta</small>
-				<h3 class="font-semibold mt-4">Add new emoji 🤲</h3>
+				<h3 id="box-title4" class="font-semibold mt-4">Add new emoji 🤲</h3>
 				<p class="bg-slate-50 rounded-lg p-2 mt-5 text-gray-500">Debug using Chrome DevTools, check for overlapping elements,</p>
 				<span class="flex justify-between mt-4">
 				  <div>
 					<small class="text-gray-400">Deadline</small><br>
 					<time>21 March 2025</time>
 				  </div>
-				  <button class="btn btn-primary">Completed</button>
+				  <button id="btn-meta" class="btn btn-primary btn-complete">Completed</button>
 				</span>
 			  </div>
 			  <!-- Box-5 -->
 			  <div class="p-5 bg-slate-200 rounded-2xl">
 				<small class="p-1 px-2 bg-slate-50 rounded-xl text-center">Google LLC</small>
-				<h3 class="font-semibold mt-4">Integrate OpenAI API         </h3>
+				<h3 id="box-title5" class="font-semibold mt-4">Integrate OpenAI API         </h3>
 				<p class="bg-slate-50 rounded-lg p-2 mt-5 text-gray-500">Debug using Chrome DevTools,<br> check for overlapping elements</p>
 				<span class="flex justify-between mt-4">
 				  <div>
 					<small class="text-gray-400">Deadline</small><br>
 					<time>21 March 2025</time>
 				  </div>
-				  <button class="btn btn-primary">Completed</button>
+				  <button id="btn-google" class="btn btn-primary btn-complete">Completed</button>
 				</span>
 			  </div>
 			  <!-- Box-6 -->
 			  <div class="p-5 bg-slate-200 rounded-2xl">
 				<small class="p-1 px-2 bg-slate-50 rounded-xl text-center">Glassdoar</small>
-				<h3 class="font-semibold mt-4">Improve Job Searching</h3>
+				<h3 id="box-title6" class="font-semibold mt-4">Improve Job Searching</h3>
 				<p class="bg-slate-50 rounded-lg p-2 mt-5 text-gray-500">Debug using Chrome DevTools,<br> check for overlapping elements</p>
 				<span class="flex justify-between mt-4">
 				  <div>
 					<small class="text-gray-400">Deadline</small><br>
 					<time>21 March 2025</time>
 				  </div>
-				  <button class="btn btn-primary">Completed</button>
+				  <button id="btn-glassdoar" class="btn btn-primary btn-complete">Completed</button>
 				</span>
 			  </div>
           </div>
         </div>
         <!-- div 2 -->
-        <div class="bg-white rounded-xl p-5">
-			<div class="flex flex-col items-center gap-5">
+        <div id="history-container" class="bg-white rounded-xl p-5 ">
+			<div class="flex flex-col items-center gap-5 pb-4 border-b-2 border-dashed border-gray-100">
 				<span class="flex items-center gap-4">
 				<img class="w-8 h-8" src="assets/activity.png" alt="Activity-Photo">
 				<h1 class="font-semibold text-xl">Activity Log</h1>
@@ -164,6 +173,38 @@
 			</div>
 		</div>
       </section>
+	  <!-- section 2  -->
+
+	   <section id="questionSection">
+		<h1 class="font-bold text-3xl text-center m-4 ">Blogs</h1>
+		<!-- Question-1 -->
+		<div class="bg-white p-3 rounded-xl mt-4">
+			<h1 class="font-bold text-xl pb-3 border-b-2 border-dashed border-gray-300">Question-1: What are the different ways to select an element in the DOM?</h1> 
+			<p class="mt-2 text-gray-500">There are several ways to select an element in the DOM. One way is to select an element by its unique ID. Another method is to select elements based on their class name or tag name. Additionally, elements can be selected using CSS selectors to target specific elements in the document. Some methods return a single element, while others return a collection of matching elements.</p>
+		</div>
+		<!-- Question-2 -->
+		<div class="bg-white p-3 rounded-xl mt-4">
+			<h1 class="font-bold text-xl pb-3 border-b-2 border-dashed border-gray-300">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1> 
+			<p class="mt-2 text-gray-500">The main difference between innerHTML, innerText, and textContent is how they handle and retrieve content from an element.
+				innerHTML returns or sets the HTML content inside an element, meaning it processes and renders any HTML tags within it. On the other hand, innerText retrieves or sets only the visible text of an element, ignoring hidden elements and extra spaces. textContent, however, gets or sets the full text of an element, including hidden text, but does not process HTML tags.</p>
+		</div>
+		<!-- Question-3 -->
+		<div class="bg-white p-3 rounded-xl mt-4">
+			<h1 class="font-bold text-xl pb-3 border-b-2 border-dashed border-gray-300">Question-3: What is event delegation in the DOM?</h1> 
+			<p class="mt-2 text-gray-500">Instead of attaching individual event listeners to each element, event delegation involves attaching a single event listener to a parent element that covers all the target elements. When an event is triggered on a target element, it bubbles up to the parent, where the event listener is listening. From there, the event handler can determine which child element triggered the event.</p>
+		</div>
+		<!-- Question-4 -->
+		<div class="bg-white p-3 rounded-xl mt-4">
+			<h1 class="font-bold text-xl pb-3 border-b-2 border-dashed border-gray-300">Question-4: What is event bubbling in the DOM?</h1> 
+			<p class="mt-2 text-gray-500">Event Bubbling is a process in the DOM where an event occurs on an element, and then it bubbles up (or propagates) to its parent elements and further up the DOM tree until it reaches the root (document). In other words, when an event happens, it first triggers on the element where the event occurred, and then it "bubbles up" through the parent elements, one by one, until it reaches the document.</p>
+		</div>
+		<!-- Question-5 -->
+		<div class="bg-white p-3 rounded-xl mt-4">
+			<h1 class="font-bold text-xl pb-3 border-b-2 border-dashed border-gray-300">Question-5: How do you create, add, and remove elements using JavaScript?</h1> 
+			<p class="mt-2 text-gray-500">To create an element in JavaScript, use document.createElement('tagName') to generate a new element. Add it to the DOM using methods like appendChild() for appending or insertBefore() for inserting before a specific element. To remove an element, use remove() or removeChild(). These methods allow you to dynamically manage DOM elements by creating, adding, and removing them as needed.</p>
+		</div>
+	   </section>
+
     </main>
 	<script src="js/script.js"></script>
   </body>
